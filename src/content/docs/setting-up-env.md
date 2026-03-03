@@ -17,6 +17,10 @@ CLOUDFLARE_ACCOUNT_ID=your-cloudflare-account-id
 CLOUDFLARE_ZONE_ID=your-cloudflare-zone-id
 CLOUDFLARE_PROJECT_NAME=your-project-name
 
+> [!NOTE]
+> For the `blog-doc` repository, `DOMAIN` is used to set the `site` URL in `astro.config.mjs`.
+
+
 # Giscus Comments Configuration
 # Obtain these values from https://giscus.app/
 PUBLIC_GISCUS_REPO=your-username/your-repo

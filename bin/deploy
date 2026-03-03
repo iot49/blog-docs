@@ -54,7 +54,7 @@ info "Pushing code to GitHub..."
 git push || warn "Git push failed, but proceeding to deploy..."
 
 # ── 5. Deploy to Cloudflare ───────────────────────────────────────────────────
-PROJECT_NAME="blog-docs"
+PROJECT_NAME="iot-blog-docs"
 
 info "Deploying to Cloudflare Pages: $PROJECT_NAME..."
 npx -y wrangler pages deploy dist --project-name "$PROJECT_NAME"
