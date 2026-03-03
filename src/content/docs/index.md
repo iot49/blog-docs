@@ -4,23 +4,30 @@ description: 'An overview of the technical architecture and features of this blo
 ---
 
 
-Welcome to the technical documentation for this blog. This series of posts covers how the blog is built, deployed, and the various features it supports.
+Welcome to the technical documentation for the IoT Blog project. This site covers the architecture, setup, and features of our decoupled blogging system.
 
-## Feature Documentation
+## 🏗️ 4-Repository Architecture
 
-- [**Installation & Setup**](/public/docs/installation) - How to get the theme engine running.
-- [**Deployment Pipeline**](/public/docs/deployment) - Native Astro automated build and deployment process.
-- [**Cloudflare Authentication**](/public/docs/authentication) - Zero Trust hierarchical access control.
-- [**Comments**](/public/docs/comments) - GitHub Discussions-backed Giscus integration.
-- [**Search**](/public/docs/search) - Privacy-preserving static site search.
-- [**Client-Side Translation**](/public/docs/translation) - On-demand translation features.
-- [**VSCode Image Paste**](/public/docs/vscode-images) - Seamless image authoring workflow.
-- [**Jupyter Notebooks**](/public/docs/jupyter-notebooks) - Writing posts using Jupyter.
+The project is split into four separate repositories to ensure clean separation of concerns:
 
-## Development Reference
+- [**System Architecture**](/architecture) - Deep dive into how the repos interact.
+- **blog-code** - The UI Engine & Theme.
+- **blog-content** - Private blog posts and assets.
+- **blog-docs** - This documentation site.
+- **blog-comments** - Private comment data.
 
-- [**Environment Variables**](/public/docs/setting-up-env) - Full list of supported configuration variables.
+## 📚 Feature Documentation
 
-## Architecture
+- [**Installation & Setup**](/installation) - How to get the theme engine running.
+- [**Deployment Pipeline**](/deployment) - Native Astro automated build and deployment process.
+- [**Cloudflare Authentication**](/authentication) - Zero Trust hierarchical access control.
+- [**Comments**](/comments) - GitHub Discussions-backed Giscus integration.
+- [**Search**](/search) - Privacy-preserving static site search.
+- [**Client-Side Translation**](/translation) - On-demand translation features.
+- [**VSCode Image Paste**](/vscode-images) - Seamless image authoring workflow.
+- [**Jupyter Notebooks**](/jupyter-notebooks) - Writing posts using Jupyter.
 
-This blog is built with **Astro 5.0**, leveraging its static site generation (SSG) capabilities for extreme performance and security. Content is separate from code, allowing for private draft management and hierarchical access control.
+## 🛠️ Development & Authoring
+
+- [**Environment Variables**](/setting-up-env) - Full list of supported configuration variables.
+- [**Authoring Guide**](/authoring) - How to add and edit these docs.

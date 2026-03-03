@@ -11,6 +11,12 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/iot49/blog-code' }],
 			sidebar: [
 				{
+					label: 'Project Overview',
+					items: [
+						{ label: 'System Architecture', slug: 'architecture' },
+					],
+				},
+				{
 					label: 'Setup & Installation',
 					items: [
 						{ label: 'Installation', slug: 'installation' },
@@ -27,6 +33,7 @@ export default defineConfig({
 						{ label: 'Translation', slug: 'translation' },
 						{ label: 'VSCode Image Paste', slug: 'vscode-images' },
 						{ label: 'Jupyter Notebooks', slug: 'jupyter-notebooks' },
+						{ label: 'Authoring Guide', slug: 'authoring' },
 					],
 				},
 			],

@@ -1,12 +1,14 @@
-# Starlight Starter Kit: Basics
+# IoT Blog Documentation (`blog-docs`)
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This repository contains the technical documentation for the IoT Blog Project. It specifically documents the **blog-code** engine and theme, while providing architectural context for the entire 4-repo system.
 
-```
-npm create astro@latest -- --template starlight
-```
+Built with [Starlight](https://starlight.astro.build).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🗃️ Repo Context
+- **blog-docs** (This repo): Public technical documentation. Served at `doc.boser-guyon.org`.
+- **blog-code**: Public UI Engine & Theme.
+- **blog-content**: Private blog posts and project assets.
+- **blog-comments**: Private comment storage/configuration.
 
 ## 🚀 Project Structure
 
