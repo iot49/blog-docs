@@ -40,3 +40,22 @@ This site is designed to be hosted on **Cloudflare Pages**.
 
 1. **Build**: `npm run build` generates the static site in the `dist/` folder.
 2. **Deploy**: Push to the `main` branch of the `blog-docs` GitHub repository to trigger an automatic deployment on Cloudflare.
+
+## Sample Blog
+
+```markdown
+---
+title: 'My Wonderful Blog Post'
+publishDate: 2025-01-01
+author: Bernhard
+accessLevel: public
+excerpt: 'Sample Blog'
+topic: blog
+image: index/sample.png
+draft: false
+language: en
+tags: ['post', 'sample']
+---
+
+Awesome new blog ...
+```

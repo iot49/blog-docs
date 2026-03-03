@@ -7,7 +7,7 @@ export default defineConfig({
 	site: process.env.DOMAIN ? `https://${process.env.DOMAIN}` : 'https://docs.boser-guyon.org',
 	integrations: [
 		starlight({
-			title: 'IoT Blog Documentation',
+			title: 'Blog Documentation',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/iot49/blog-code' }],
 			sidebar: [
 				{
