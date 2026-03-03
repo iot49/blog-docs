@@ -5,7 +5,7 @@ This repository contains the technical documentation for the IoT Blog Project. I
 Built with [Starlight](https://starlight.astro.build).
 
 ## 🗃️ Repo Context
-- **blog-docs** (This repo): Public technical documentation. Served at `doc.boser-guyon.org`.
+- **blog-docs** (This repo): Public technical documentation. Served at `docs.boser-guyon.org`.
 - **blog-code**: Public UI Engine & Theme.
 - **blog-content**: Private blog posts and project assets.
 - **blog-comments**: Private comment storage/configuration.

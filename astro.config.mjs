@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://doc.boser-guyon.org',
+	site: 'https://docs.boser-guyon.org',
 	integrations: [
 		starlight({
 			title: 'IoT Blog Documentation',
