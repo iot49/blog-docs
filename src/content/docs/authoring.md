@@ -69,10 +69,10 @@ Awesome new blog ...
 The simplest way for adding images is to paste them in vscode. This automatically copies the file to the a local folder and inserts a link to it in the markdown file:
 
 ```markdown
-![alt text](<images/2026-02-01 blog-post-template/image.png> 'Vancouver')
+![alt text](images/authoring/image.png 'Vancouver')
 ```
 
-![alt text](<images/2026-02-01 blog-post-template/image.png> 'Vancouver')
+![alt text](images/authoring/image.png 'Vancouver')
 
 For the image to appear as the blog title image, copy the link to the `image` tag in the frontmatter and remove the link in the text.
 
