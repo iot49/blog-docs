@@ -50,7 +50,7 @@ publishDate: 2025-01-01
 author: Bernhard
 accessLevel: public
 excerpt: 'Sample Blog'
-topic: blog
+category: blog
 image: index/sample.png
 draft: false
 language: en
@@ -59,3 +59,102 @@ tags: ['post', 'sample']
 
 Awesome new blog ...
 ```
+
+- `accessLevel`: `public` posts are visible for everyone. Other access levels include `familiy`, `friends`, and `personal` and require login. Only users whose email is specified in `access-list.yaml` will be able to access these posts. Default: `personal`.
+- `category`: permissible values defined in `blog-content/src/content/config.ts`. E.g. `blog` (generic post, of interest to most audiences), `railroad` (railroad related posts), `test` (related to testing). Default: `blog`.
+- `draft`: Posts with `draft: true` show only in the preview but are not deployed online.
+
+### Images
+
+The simplest way for adding images is to paste them in vscode. This automatically copies the file to the a local folder and inserts a link to it in the markdown file:
+
+```markdown
+![alt text](<images/2026-02-01 blog-post-template/image.png> 'Vancouver')
+```
+
+![alt text](<images/2026-02-01 blog-post-template/image.png> 'Vancouver')
+
+For the image to appear as the blog title image, copy the link to the `image` tag in the frontmatter and remove the link in the text.
+
+Consult the [Official Astro Docs Tutorial](https://docs.astro.build/en/tutorial/2-pages/2/) for more information.
+
+### Markdown
+
+Astro supports [commonmark](https://commonmark.org/help/)
+
+#### Block Quote
+
+> Block quote
+>
+> Precede quoted text with a `>`.
+
+#### Lists
+
+````markdown
+- Unordered list
+  - Code highlighting
+    ```python
+    def __init__(self):
+        pass
+    ```
+  1. Order
+  2. Second
+  - Less order
+- More ...
+````
+
+- Unordered list
+  - Code highlighting
+    ```python
+    def __init__(self):
+        pass
+    ```
+  1. Order
+  2. Second
+  - Less order
+- More ...
+
+#### Latex
+
+LaTeX: inline $a^2 + b^2 = c^2$ or display
+
+$$
+a^2 + b^2 = c^2
+$$
+
+#### Tables
+
+```markdown
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell 1   | Cell 2   |
+```
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell 1   | Cell 2   |
+
+#### Alerts
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+#### More Info
+
+[Astro Guide](https://docs.astro.build/en/guides/markdown-content/)
+
+[Useful Plugins](https://ryanwelch.co.uk/blog/useful-markdown-plugins-astro/)
+
+[Images in Astro](https://www.emgoto.com/astro-blog-images/)
