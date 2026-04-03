@@ -39,7 +39,7 @@ This guide will help you set up the blog code repository on your local machine f
     ```
 
 4.  **Environment Variables**:
-    Configure your `.env` file for local development and deployment. See the [Setting up Environment Variables](/public/docs/setting-up-env) guide for details.
+    Configure your `.env` file for local development and deployment. See the [Setting up Environment Variables](/blog/setting-up-env) guide for details.
 
 ## Development Workflow
 
