@@ -49,3 +49,11 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+## 🚀 Deployment
+
+Secrets are resolved automatically from **1Password** (or a local `.env` if it exists). To build and deploy the documentation site to Cloudflare Pages:
+
+```bash
+bin/deploy
+```

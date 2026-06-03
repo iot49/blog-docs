@@ -27,12 +27,28 @@ echo -e "\n${BOLD}=== Pre-deploy checks (${REPO_ROOT}) ===${RESET}\n"
 
 ERRORS=0
 
+if [ -f "$REPO_ROOT/.env" ]; then
+  # Load .env variables
+  export $(grep -v '^#' "$REPO_ROOT/.env" | xargs)
+else
+  export CLOUDFLARE_API_TOKEN=$(op read "op://boser-guyon.org/Cloudflare Pages/token")
+  export CLOUDFLARE_ACCOUNT_ID=$(op read "op://boser-guyon.org/Cloudflare Pages/account_id")
+  export DOMAIN="docs.boser-guyon.org"
+  export CLOUDFLARE_PROJECT_NAME="blog-docs"
+fi
+
 # ── 1. Uncommitted changes ────────────────────────────────────────────────────
 info "Checking for uncommitted changes..."
 if [[ -n "$(git status --porcelain)" ]]; then
   info "Local workspace has uncommitted changes:"
   git status --short
   echo ""
+fi
+
+# Ensure dependencies are installed
+if [[ ! -d "node_modules" ]]; then
+  info "node_modules folder not found. Installing dependencies..."
+  npm install
 fi
 
 # ── 2. Prettier ───────────────────────────────────────────────────────────────
@@ -57,7 +73,7 @@ git push || warn "Git push failed, but proceeding to deploy..."
 PROJECT_NAME="blog-docs"
 
 info "Deploying to Cloudflare Pages: $PROJECT_NAME..."
-npx -y wrangler pages deploy dist --project-name "$PROJECT_NAME" --branch main
+npx wrangler@3 pages deploy dist --project-name "$PROJECT_NAME" --branch main
 
 echo -e "\n${GREEN}${BOLD}✓ Deployed!${RESET}"
 echo -e "  ${CYAN}https://${PROJECT_NAME}.pages.dev${RESET}\n"
